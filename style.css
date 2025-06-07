@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: hsl(0, 0%, 8%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px hsla(180, 89%, 48%, 0.459);
+
+}
+
+#cargo{
+  height: 1.5em; 
+  color: hsl(180, 89%, 48%);
+  font-weight: 700;
+  font-size: large;
+}
+
+p{
+  color: hsl(0, 0%, 100%);
+  font-size: small;
+  margin-top: 5px;
+  font-family: "Playfair Display", serif;
+}
+
+.img-container {
+  height: 99px;
+  width: 99px;
+  border-radius: 50%;
+  background-image: url("imgs/anime.png");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.7s ease;
+}
+
+.img-container:hover {
+  background-image: url("imgs/icone-perfil.png");
+  cursor: pointer;
+}
+
+.conteiner {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  gap: 22px;
+  border-radius: 12px;
+  background-color: hsla(0, 0%, 9%, 0.808);
+  margin: auto;
+}
+
+.text-hero {
+  text-align: center;
+}
+
+.button-hero {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top:5px;
+
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.button-hero button {
+  width: 48px;
+  height: 48px;
+  background-color: hsl(0, 0%, 16%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.button-hero li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-hero span.label {
+  color: white;
+  font-size: 10px;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.button-hero button:hover + .label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.button-hero button:hover {
+  transform: scale(1.2);
+  background-color: hsl(180, 89%, 24%);
+  
+}
+
+.button-hero img {
+  width: 24px;
+  height: 24px;
+}
+.img-hero{
+    border-radius: 40px;
+    margin-top: 10px;
+}
+@media (max-width: 400px) {
+  .conteiner {
+    width: 90%;
+    height: auto;
+    padding: 30px 10px;
+  }
+
+  .button-hero {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
